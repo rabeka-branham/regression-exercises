@@ -71,6 +71,9 @@ def split_data(dataframe):
 
 def wrangle_zillow():
     train, validate, test = split_data(prep_zillow(acquire_zillow()))
+    print(f'Train:\t\t{train.shape}')
+    print(f'Validate:\t{validate.shape}')
+    print(f'Test:\t\t{test.shape}')
     
     return train, validate, test
     
